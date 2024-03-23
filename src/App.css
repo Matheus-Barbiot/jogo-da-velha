@@ -1,0 +1,11 @@
+.item {
+    display: inline-block;
+    background-color: red;
+    color: white;
+    margin: 5px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-size: 4em;
+    overflow: hidden;
+}
