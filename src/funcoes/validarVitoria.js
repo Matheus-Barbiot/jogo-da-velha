@@ -1,4 +1,4 @@
-function validarVitoria(jogo) {
+export default function validarVitoria(jogo) {
     // Verificar linhas
     for (let i = 0; i < 3; i++) {
         if (jogo[i][0] !== '' && jogo[i][0] === jogo[i][1] && jogo[i][1] === jogo[i][2]) {
@@ -23,8 +23,18 @@ function validarVitoria(jogo) {
         return jogo[0][2]; // Retorna o jogador que venceu
     }
 
+    let n = 0
+    for(let i = 0; i < 3; i++) {
+        for(let c = 0; c < 3; c++) {
+            if(jogo[i][c] === ''){
+                n += 1
+            }
+        }
+    }
+
+    if(n === 0) {
+        return 'empate'
+    }
     // Se não houver vencedor
     return null;
 }
-
-export default validarVitoria
